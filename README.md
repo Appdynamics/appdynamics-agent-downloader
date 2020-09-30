@@ -20,6 +20,7 @@ A simple script that lets you programmatically download AppDynamics agents.
 
 1. Clone the repo 
 2. Make the script executable `chmod +x get-agent.sh`
+3. Ensure you have `jq` installed - https://stedolan.github.io/jq/download/
 
 ## Examples:
 
@@ -37,7 +38,7 @@ A simple script that lets you programmatically download AppDynamics agents.
     -d, --dryrun                       Rturns only the download URL if specificed, it is recommended to use this arg for provisioning tools such as ansible, chef, etc
 `````
 
-### Download the  Java Agent 
+### Download the Java Agent 
 
 `./get-agent.sh download sun-java -v 20.6.0 `
 
