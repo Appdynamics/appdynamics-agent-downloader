@@ -77,7 +77,7 @@ which you can pass to a curl or similar command on the target machine.
 
 ````
 - name: Download AppDynamics Agent
-  command: "{{role_path}}/files/get-agent.sh download {{agent_type}} -v {{agent_version}}"
+  command: "{{role_path}}/files/get-agent.sh download {{agent_type}} -v {{agent_version}} --dryrun"
   register: agent_download_url
   delegate_to: localhost
   failed_when:
