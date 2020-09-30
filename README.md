@@ -1,8 +1,10 @@
-# Get AppDynamics Agent 
+# Automated AppDynamics Agent Download 
 
 A simple script that lets you programmatically download AppDynamics agents. 
 
-## Supported agent types: 
+## Supported agent types
+
+*You may create an issue if you need an agent that is not in the list* 
 
 | Agent type | Description |
 |--|--|
@@ -14,7 +16,7 @@ A simple script that lets you programmatically download AppDynamics agents.
 |`db` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Linux install |
 |`db-win` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Windows Install|
 
-*You may create an issue if you need an agent that is not the list* 
+
 
 ## Steps: 
 
