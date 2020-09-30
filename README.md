@@ -2,7 +2,7 @@
 
 A simple script that lets you programmatically download AppDynamics agents. 
 
-Supported agent types are: 
+## Supported agent types: 
 
 | Agent type | Description |
 |--|--|
