@@ -45,9 +45,12 @@ The above command will dowload the sun-java agent and unzip it's content in a fo
 
 
 ### Dry run 
+
 It is recommended to use the `--dryrun` or `-d` arg if you intend to embed this script into a configuration management and/or provisioning tools like Ansible, Cheff, Puppet, Terraform, Pulumi etc. 
 
-`./get-agent.sh download machine-win -v 20.6.0 --dryrun ` or  `./get-agent.sh download machine-win -v 20.6.0 -d `
+`./get-agent.sh download machine-win -v 20.6.0 --dryrun ` or
+
+`./get-agent.sh download dotnet -v 20.8.0 -d `
 
 outputs only the download URL
 
