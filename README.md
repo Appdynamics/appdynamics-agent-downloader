@@ -52,9 +52,9 @@ It is recommended to use the `--dryrun` or `-d` arg if you intend to embed this 
 
 `./get-agent.sh download dotnet -v 20.8.0 -d `
 
-outputs only the download URL
+outputs only the download URL, for example
 
-https://download-files.appdynamics.com/download-file/machine-bundle/20.6.0.2676/machineagent-bundle-64bit-windows-20.6.0.2676.zip
+`https://download-files.appdynamics.com/download-file/machine-bundle/20.6.0.2676/machineagent-bundle-64bit-windows-20.6.0.2676.zip`
 
 which you can pass to a curl or similar command on the target machine. 
 
