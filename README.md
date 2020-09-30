@@ -6,8 +6,8 @@ Supported agent types are:
 
 | Agent type | Description |
 |--|--|
-|`sun-java` or `java` | Agent to monitor Java applications (for Sun and JRockit JVM) running on legacy JRE versions (1.6 and 1.7) |
-|`sun-java8` or `java8` | Agent to monitor Java applications (All Vendors) running on JRE version 1.8 and above |
+|`sun-java`    or     `java`      | Agent to monitor Java applications (for Sun and JRockit JVM) running on legacy JRE versions (1.6 and 1.7) |
+|`sun-java8`   or     `java8`   | Agent to monitor Java applications (All Vendors) running on JRE version 1.8 and above |
 |`machine` | 64 Bit Machine agent ZIP bundle with JRE to monitor your Linux servers |
 |`machine-win` | 64 Bit Machine agent ZIP bundle with JRE to monitor your windows servers. |
 |`dotnet-core` | AppDynamics .NET agent for Linux allows you to monitor your .NET core applications in production running on Linux |
