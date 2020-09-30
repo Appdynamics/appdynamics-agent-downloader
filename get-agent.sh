@@ -267,11 +267,11 @@ do_unzip() {
 }
 
 ###################################################################################################################
-#                                             COMMAND FUNCTIONS                                                   #
+#                                             DOWNLOAD COMMAND FUNCTION                                                  #
 ###################################################################################################################
 
-# Implements the `download` sub-command. This involves downloading the
-# specified agent and verifying its integrity.
+# Implements the `download` sub-command. 
+# This involves downloading the specified agent 
 #
 # Args: [agent-type] --version VERSION --dryrun
 download() {
