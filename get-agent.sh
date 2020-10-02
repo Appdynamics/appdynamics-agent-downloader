@@ -156,7 +156,7 @@ download_options() {
     _finder="machineagent-bundle-64bit-windows"
   elif [ "$1" = "dotnet" ]; then
     _app_agent="dotnet"
-    _finder="dotnet"
+    _finder="dotNetAgentSetup64"
     _os_platform="windows"
   
   elif [ "$1" = "dotnet-core" ]; then
@@ -267,11 +267,10 @@ do_unzip() {
 }
 
 ###################################################################################################################
-#                                             DOWNLOAD COMMAND FUNCTION                                                  #
+#                                            DOWLOAD COMMAND FUNCTION                                                   #
 ###################################################################################################################
 
 # Implements the `download` sub-command. 
-# This involves downloading the specified agent 
 #
 # Args: [agent-type] --version VERSION --dryrun
 download() {
