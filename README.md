@@ -65,31 +65,42 @@ which you can pass to a curl or similar command on the target machine.
 
 ##### getAgent playbook 
 ````
----
-- hosts: java
-  gather_facts: no
+--
+- hosts: all
   tasks:
     - include_role:
-        name: getAgent
+        name: java
       vars:
-       agent_version: 20.6.0
-       agent_type: dotnet
+        agent_version: 20.8.0
+        agent_type: sun-java
+        application_environment: "production"
+        # Your controller details 
+        controller_account_access_key: "ffdsfs" # Please add this to your Vault 
+        controller_host_name: "saas.appdynamics.com" # Your AppDynamics controller 
+        controller_account_name: "customer1" # Please add this to your Vault 
+        ssl_enabled: "false"
+        controller_port: "443"
+        
 ````
 
 ##### getAgent task: main.yaml 
 
 ````
-- name: Download AppDynamics Agent
-  command: "{{role_path}}/files/get-agent.sh download {{agent_type}} -v {{agent_version}} --dryrun"
+
+---
+- name: "Get AppDynamics Agent Download URL type"
+  command: "{{ role_path }}/files/get-agent.sh download {{ agent_type }} -v {{ agent_version }} --dryrun"
   register: agent_download_url
   delegate_to: localhost
   failed_when:
    (agent_download_url.rc != 0) or 
    (agent_download_url.stderr != '') or 
-   (agent_download_url.stdout is not match("https://download-files.appdynamics.com/download-file/.*"))
-   
+   (agent_download_url.stdout is not match("https://download-files.appdynamics.com/download-file/"))
+  changed_when: False
+
 - debug: 
    msg: "{{ agent_download_url.stdout }}"
+   
 ````
 
 
