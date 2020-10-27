@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script is not officially supported by AppDynamics 
 # Author: Israel Ogbole 
@@ -135,7 +135,7 @@ check_dependencies() {
 #Supported agent types:
 download_options() {
   if [ "$1" = "sun-java" ] || [ "$1" = "java" ]; then
-    _app_agent="jvm%2Cjava-jdk8" 
+    _app_agent="jvm%2Cjava-jdk8" #_app_agent="jvm"
     _finder="sun-jvm"
     _os_platform="linux"
   elif [ "$1" = "sun-java8" ] || [ "$1" = "java8" ]; then
@@ -158,7 +158,7 @@ download_options() {
     _app_agent="dotnet"
     _finder="dotNetAgentSetup64"
     _os_platform="windows"
-  
+    
   elif [ "$1" = "dotnet-core" ]; then
     _app_agent="dotnet,dotnet-core"
     _finder="AppDynamics-DotNetCore-linux-x64"
