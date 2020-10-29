@@ -94,7 +94,6 @@ which you can pass to a curl or similar command on the target machine.
   delegate_to: localhost
   failed_when:
    (agent_download_url.rc != 0) or 
-   (agent_download_url.stderr != '') or 
    (agent_download_url.stdout is not match("https://download-files.appdynamics.com/download-file/"))
   changed_when: False
 
