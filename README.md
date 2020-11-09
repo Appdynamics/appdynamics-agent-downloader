@@ -6,15 +6,18 @@ A simple script that lets you programmatically download AppDynamics agents.
 
 *You may create an issue if you need an agent that is not in the list* 
 
-| Agent type | Description |
+| Agent type              | Description |
 |--|--|
-|`sun-java`    or     `java`      | Agent to monitor Java applications (for Sun and JRockit JVM) running on legacy JRE versions (1.6 and 1.7) |
+|`sun-java`   or     `java`  | Agent to monitor Java applications (All Vendors) running on JRE version 1.7 and less |
 |`sun-java8`   or     `java8`   | Agent to monitor Java applications (All Vendors) running on JRE version 1.8 and above |
+|`ibm-java` | Agent to monitor Java applications (All Vendors) running on IBM JRE |
+|`dotnet` | Agent to monitor Full .Net Framework application on Windows |
 |`machine` | 64 Bit Machine agent ZIP bundle with JRE to monitor your Linux servers |
 |`machine-win` | 64 Bit Machine agent ZIP bundle with JRE to monitor your windows servers. |
-|`dotnet-core` | AppDynamics .NET agent for Linux allows you to monitor your .NET core applications in production running on Linux |
-|`db` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Linux install |
-|`db-win` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Windows Install|
+|`db` | Agent to monitor Databases|
+|`db-win*` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Windows Install|
+|`dotnet-core*` | Agent to Monitor .NetCore applications on Linux|
+|`dotnet-core-win*` | Agent to Monitor .NetCore applications on Windows |
 
 
 
