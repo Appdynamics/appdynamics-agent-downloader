@@ -15,9 +15,9 @@ A simple script that lets you programmatically download AppDynamics agents.
 |`machine` | 64 Bit Machine agent ZIP bundle with JRE to monitor your Linux servers |
 |`machine-win` | 64 Bit Machine agent ZIP bundle with JRE to monitor your windows servers. |
 |`db` | Agent to monitor Databases|
-|`db-win*` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Windows Install|
-|`dotnet-core*` | Agent to Monitor .NetCore applications on Linux|
-|`dotnet-core-win*` | Agent to Monitor .NetCore applications on Windows |
+|`db-win` | Agent to monitor any combination of DB2, Oracle, SQL Server, Sybase, MySQL, Sybase IQ and PostgreSQL database platforms. Windows Install|
+|`dotnet-core` | Agent to Monitor .NetCore applications on Linux|
+|`dotnet-core-win` | Agent to Monitor .NetCore applications on Windows |
 
 
 
@@ -68,21 +68,24 @@ which you can pass to a curl or similar command on the target machine.
 
 ##### getAgent playbook 
 ````
---
+---
 - hosts: all
   tasks:
     - include_role:
-        name: java
+        name: appdynamics.agents.java
       vars:
-        agent_version: 20.8.0
+        # Define Agent Type and Version 
+        agent_version: 20.9.0
         agent_type: sun-java
-        application_environment: "production"
+        # The applicationName
+        application_name: "IoT_API" # ONLY required if agent type is not machine or db
+        tier_name: "java_tier" # ONLY required if agent type is not machine or db
         # Your controller details 
-        controller_account_access_key: "ffdsfs" # Please add this to your Vault 
-        controller_host_name: "saas.appdynamics.com" # Your AppDynamics controller 
+        controller_account_access_key: "b0248ceb-c954-4a37-97b5-207e90418cb4" # Please add this to your Vault 
+        controller_host_name: "ansible-20100nosshcont-bum4wzwa.appd-cx.com" # Your AppDynamics controller 
         controller_account_name: "customer1" # Please add this to your Vault 
-        ssl_enabled: "false"
-        controller_port: "443"
+        enable_ssl: "false"
+        controller_port: "8090"
         
 ````
 
