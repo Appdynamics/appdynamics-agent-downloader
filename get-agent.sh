@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # This script is not officially supported by AppDynamics 
-# Author: Israel Ogbole 
 
 set -o nounset
 
