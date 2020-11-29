@@ -1,6 +1,10 @@
 # Automated AppDynamics Agent Download 
 
-A simple script that lets you programmatically download AppDynamics agents. 
+A simple script that lets you download AppDynamics agents.
+
+`./get-agent.sh download sun-java -v 20.10.0` to download agent binaries <br>
+or use the `--dryrun` option to get the download URL <br>
+`./get-agent.sh download sun-java -v 20.6.0 --dryrun`
 
 ## Supported agent types
 
