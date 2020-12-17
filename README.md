@@ -28,7 +28,7 @@ or use the `--dryrun` option to get the download URL <br>
 
 1. Clone the repo 
 2. Make the script executable `chmod +x get-agent.sh`
-3. Ensure you have `jq` installed - https://stedolan.github.io/jq/download/
+3. Ensure you have `curl`,`jq`(https://stedolan.github.io/jq/download/) and `unzip` installed.
 
 ## Examples:
 
